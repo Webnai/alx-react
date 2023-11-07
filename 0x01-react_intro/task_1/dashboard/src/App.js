@@ -1,5 +1,9 @@
 import logo from './logo.jpg';
 import './App.css';
+import { getFullYear, getFooterCopy } from './utils';
+
+const year = getFullYear();
+const getFooter = getFooterCopy(false);
 
 export default function App() {
     return (
@@ -14,7 +18,7 @@ export default function App() {
             </div>
             <div className="linea"></div>
             <footer className="App-footer">
-                <p>Copyright 2020 - holberton School</p>
+                <p>Copyright {year} - {getFooter}</p>
             </footer>
         </div>
     );

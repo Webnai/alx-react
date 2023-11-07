@@ -1,5 +1,9 @@
 import logo from './logo.jpg';
 import './App.css';
+import { getFullYear, getFooterCopy } from './utils';
+
+const year = getFullYear();
+const getFooter = getFooterCopy(false);
 
 export default function App() {
     return (
@@ -11,10 +15,15 @@ export default function App() {
             <div className="linea"></div>
             <div className="App-body">
                 <p>Login to access the full dashboard</p>
+                <label htmlFor="Email">Email: </label>
+                <input type="email" id="Email" name="Email"/>
+                <label htmlFor="Password"> Password: </label>
+                <input type="password" id="Password" name="Password"/>
+                <button>Ok</button>
             </div>
             <div className="linea"></div>
             <footer className="App-footer">
-                <p>Copyright 2020 - holberton School</p>
+                <p>Copyright {year} - {getFooter}</p>
             </footer>
         </div>
     );
